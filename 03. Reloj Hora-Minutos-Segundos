@@ -1,0 +1,17 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    for (int horas = 0; horas < 24; ++horas) {
+        for (int minutos = 0; minutos < 60; ++minutos) {
+            for (int segundos = 0; segundos < 60; ++segundos) {
+                cout << setfill('0') << setw(2) << horas << ":"
+                     << setfill('0') << setw(2) << minutos << ":"
+                     << setfill('0') << setw(2) << segundos << endl;
+            }
+        }
+    }
+    return 0;
+}
