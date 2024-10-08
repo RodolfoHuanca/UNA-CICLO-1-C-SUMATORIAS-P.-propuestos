@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+long long factorial(int n) {
+  if (n == 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
+int main() {
+  int N;
+  double X, ST = 0; 
+
+  cout << "Ingrese el valor de X: ";
+  cin >> X;
+  cout << "Ingrese el valor de N: ";
+  cin >> N;
+
+  for (int i = 1; i <= N; i += 2) { 
+    ST += pow(X, i) / factorial(i);
+  }
+  cout << "El resultado de la sumatoria ST es: " << ST << endl;
+  return 0;
+}
