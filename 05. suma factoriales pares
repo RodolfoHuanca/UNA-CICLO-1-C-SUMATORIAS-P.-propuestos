@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+long long factorial(int n) {
+  if (n == 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
+int main() {
+  int N;
+  long long SF = 0;
+
+  cout << "Ingrese el valor de N: ";
+  cin >> N;
+
+  for (int i = 2; i <= N; i += 2) { 
+    SF += factorial(i); 
+  }
+
+  cout << "la sumatoria es: " << SF << endl;
+
+  return 0;
+}
