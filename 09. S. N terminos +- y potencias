@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int N;
+    double X, ST = 0;
+    
+    cout << "valor de X: ";
+    cin >> X;
+    
+    cout << "número de términos N: ";
+    cin >> N;
+    
+    for (int i = 1; i <= N; i++) {
+        double termino = pow(X, i)/i;
+        if (i % 2 == 0) {
+            ST -= termino;
+        } else {
+            ST += termino;
+        }
+    }
+
+    cout << "ST = " << ST << endl;
+    return 0;
+}
